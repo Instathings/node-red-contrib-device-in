@@ -1,0 +1,51 @@
+<script type="text/javascript">
+  RED.nodes.registerType('device in', {
+    oneditprepare: function () {
+      console.log('prepare');
+      $.getJSON('devices', function (data) {
+        console.log(data);
+        const keys = Object.keys(data);
+        keys.forEach((protocol) => {
+          const devices = data[protocol];
+          for (var i = 0; i < devices.length; i++) {
+            const element = devices[i];
+            var value = element.ieeeAddr;
+            var text = `${element.name}`;
+            $('#node-input-friendly').append($("<option></option>").attr("value", value).text(text));
+          }
+        })
+      });
+      // Make sure the selected value is also selected in the <select> tag
+      $('#node-input-friendly').val(this.userValue);
+    },
+    category: 'function',
+    color: '#e57373',
+    defaults: {
+      name: {
+        value: ""
+      },
+      friendly: {
+        value: "",
+      },
+    },
+    inputs: 0,
+    outputs: 1,
+    icon: "file.png",
+    label: function () {
+      return this.name || "InstaDevice";
+    }
+  });
+</script>
+<script type="text/html" data-template-name="device in">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-friendly"><i class="icon-tag"></i> Friendly name</label>
+    <select id="node-input-friendly"></select>
+  </div>
+</script>
+<script type="text/html" data-help-name="device in">
+  <p>A node that receives data from an Instathings device</p>
+</script>

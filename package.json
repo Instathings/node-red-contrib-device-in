@@ -1,0 +1,32 @@
+{
+  "name": "device-in",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Instathings/device-in.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Instathings/device-in/issues"
+  },
+  "node-red": {
+    "nodes": {
+      "device-in": "device-in.js"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "dependencies": {
+    "mqtt": "^3.0.0"
+  },
+  "homepage": "https://github.com/Instathings/device-in#readme"
+}
