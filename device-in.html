@@ -18,21 +18,22 @@
       // Make sure the selected value is also selected in the <select> tag
       $('#node-input-friendly').val(this.userValue);
     },
-    category: 'function',
+    category: 'instathings',
     color: '#e57373',
     defaults: {
       name: {
-        value: ""
+        value: "",
       },
       friendly: {
         value: "",
+        required: true,
       },
     },
     inputs: 0,
     outputs: 1,
     icon: "file.png",
     label: function () {
-      return this.name || "InstaDevice";
+      return this.name || "Device";
     }
   });
 </script>
