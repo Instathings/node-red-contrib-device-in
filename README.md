@@ -9,5 +9,5 @@ This addon is a work in progess and may be subject to changes.
 If you're brave enough you can install this just like any node-red addon.
 
 ### License
-gate-addon-zigbee is [fair-code](http://faircode.io/) licensed under [Apache 2.0 with Commons Clause](./LICENSE.md)
+device-in is [fair-code](http://faircode.io/) licensed under [Apache 2.0 with Commons Clause](./LICENSE.md)
 
