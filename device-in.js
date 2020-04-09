@@ -6,7 +6,7 @@ const onClose = require('./events/onClose');
 module.exports = function deviceInFn(RED) {
   function DeviceInNode(config) {
     RED.nodes.createNode(this, config);
-    const client = mqtt.connect('mqtt://localhost');
+    const client = mqtt.connect('mqtt://eclipse-mosquitto');
     client.on('connect', onConnect.call(this, client, config));
     this.on('close', onClose);
   }
