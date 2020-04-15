@@ -1,6 +1,6 @@
 {
-  "name": "@instathings/device-in",
-  "version": "1.0.2",
+  "name": "@instathings/node-red-contrib-device-in",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -28,5 +28,8 @@
   "dependencies": {
     "mqtt": "^3.0.0"
   },
-  "homepage": "https://github.com/Instathings/device-in#readme"
+  "homepage": "https://github.com/Instathings/device-in#readme",
+  "keywords": [
+    "node-red"
+  ]
 }
