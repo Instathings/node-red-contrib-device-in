@@ -3,13 +3,13 @@
     oneditprepare: function () {
       console.log('prepare');
       $.getJSON('devices', function (data) {
-        console.log(data);
+        console.log('data', data);
         const keys = Object.keys(data);
         keys.forEach((protocol) => {
           const devices = data[protocol];
           for (var i = 0; i < devices.length; i++) {
             const element = devices[i];
-            var value = element.ieeeAddr;
+            var value = `${protocol}|${element.ieeeAddr}`;
             var text = `${element.name}`;
             $('#node-input-friendly').append($("<option></option>").attr("value", value).text(text));
           }
