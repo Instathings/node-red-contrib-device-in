@@ -30,6 +30,9 @@
   },
   "homepage": "https://github.com/Instathings/device-in#readme",
   "keywords": [
-    "node-red"
+    "node-red",
+    "zigbee",
+    "modbus",
+    "mqtt"
   ]
 }
