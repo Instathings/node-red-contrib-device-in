@@ -8,12 +8,13 @@ module.exports = function onConnectFn(client, config) {
     const protocolId = splitted[0];
     const friendly = splitted[1];
     switch (protocolId) {
-      case 'modbus': {
-        protocol = 'modbus';
-        break;
-      }
       case 'vRy6GTde': {
         protocol = 'zigbee';
+        break;
+      }
+      default: {
+        // usually protocolId is knx || modbus
+        protocol = protocolId;
         break;
       }
     }
