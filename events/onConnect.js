@@ -7,7 +7,6 @@ module.exports = function onConnectFn(client, config) {
     const splitted = config.friendly.split('|');
     const protocolId = splitted[0];
     const friendly = splitted[1];
-    // eslint-disable-next-line default-case
     switch (protocolId) {
       case 'vRy6GTde': {
         protocol = 'zigbee';
